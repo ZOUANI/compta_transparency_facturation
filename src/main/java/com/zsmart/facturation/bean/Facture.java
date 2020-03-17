@@ -7,7 +7,7 @@ package com.zsmart.facturation.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -48,10 +48,10 @@ public class Facture implements Serializable {
     @Column(precision = 16, scale = 4)
     protected BigDecimal totalRestantHt;
     @Temporal(javax.persistence.TemporalType.DATE)
-    protected LocalDateTime dateFacture;
+    protected Date dateFacture;
 
     @Temporal(javax.persistence.TemporalType.DATE)
-    protected LocalDateTime dateSaisie;
+    protected Date dateSaisie;
 
     protected String referenceSociete;
     @ManyToOne
@@ -123,19 +123,19 @@ public class Facture implements Serializable {
         this.tva = tva;
     }
 
-    public LocalDateTime getDateFacture() {
+    public Date getDateFacture() {
         return dateFacture;
     }
 
-    public void setDateFacture(LocalDateTime dateFacture) {
+    public void setDateFacture(Date dateFacture) {
         this.dateFacture = dateFacture;
     }
 
-    public LocalDateTime getDateSaisie() {
+    public Date getDateSaisie() {
         return dateSaisie;
     }
 
-    public void setDateSaisie(LocalDateTime dateSaisie) {
+    public void setDateSaisie(Date dateSaisie) {
         this.dateSaisie = dateSaisie;
     }
 
